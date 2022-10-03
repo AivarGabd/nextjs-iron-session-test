@@ -1,5 +1,4 @@
 import React from "react";
-import Layout from "components/Layout";
 import { withIronSessionSsr } from "iron-session/next";
 import { sessionOptions } from "lib/session";
 import { User } from "pages/api/user";
@@ -10,7 +9,7 @@ export default function SsrProfile({
   user,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
-    <Layout>
+    <div>
       <h1>Your GitHub profile</h1>
       <h2>
         This page uses{" "}
@@ -35,7 +34,7 @@ export default function SsrProfile({
           <pre>{JSON.stringify(user, null, 2)}</pre>
         </>
       )}
-    </Layout>
+    </div>
   );
 }
 

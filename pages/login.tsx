@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import useUser from "lib/useUser";
-import Layout from "components/Layout";
 import Form from "components/Form";
 import fetchJson, { FetchError } from "lib/fetchJson";
 
@@ -13,9 +12,8 @@ export default function Login() {
 
   const [errorMsg, setErrorMsg] = useState("");
 
-  return (
-    <Layout>
-      <div className="login">
+  return <>
+  <div className="login">
         <Form
           errorMessage={errorMsg}
           onSubmit={async function handleSubmit(event) {
@@ -44,15 +42,5 @@ export default function Login() {
           }}
         />
       </div>
-      <style jsx>{`
-        .login {
-          max-width: 21rem;
-          margin: 0 auto;
-          padding: 1rem;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-        }
-      `}</style>
-    </Layout>
-  );
+      </>
 }
