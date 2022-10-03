@@ -12,8 +12,6 @@ export default function Home({ user }: any) {
       method: "POST",
       headers: { "Content-Type": "application/json" }
     })
-
-
   }
 
 
